@@ -41,7 +41,7 @@ func sendWebExMessage(title string, contentLink string, commentsLink string){
 
 func (r *goalBot) Post(p *reddit.Post) error {
    if b,err := regexp.MatchString(`\[[0-9]+\]|[0-9]{1,2}'`,p.Title); b && (err==nil) {
-       if b, err := regexp.MatchString(`Dortmund|Valencia|Bayern|Liverpool|Tottenham|Chelsea|Barcelona|Juventus|Real Madrid`,p.Title); b && (err==nil){
+       if b, err := regexp.MatchString(`Brugge|Arsenal|Dortmund|Valencia|Bayern|Liverpool|Tottenham|Chelsea|Barcelona|Juventus|Real Madrid|Espanyol`,p.Title); b && (err==nil){
 	   log.Info("Found a goal to send")
 	   <-time.After(10 * time.Second)
            fmt.Printf("Title: %s | URL: %s | Permalink: %s\n", p.Title, p.URL, p.Permalink)
