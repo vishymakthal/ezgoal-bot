@@ -1,6 +1,4 @@
 *.txt
-go.mod
-go.sum
 ezgoal-bot
 .idea/
 .env
